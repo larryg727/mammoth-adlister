@@ -1,0 +1,24 @@
+li {
+    list-style: none;
+    padding: 10px;
+    margin: 10px;
+    background-color: #337ab3;
+    border: #808080 solid 2px;
+    border-radius: 3px;
+    display: inline-block;
+    color: white;
+    width: 80px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav {
+    text-align: center;
+}
+
+form {
+    text-align: center;
+}
