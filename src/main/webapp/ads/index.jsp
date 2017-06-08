@@ -12,7 +12,7 @@
     <h1>Welcome to the Adlister ad page!</h1>
 
     <c:forEach var="ad" items="${ads}">
-        <p>Title: ${ad.title}</p>
+        <h3>Title: ${ad.title}</h3>
         <p>Description: ${ad.description}</p>
     </c:forEach>
 </div>
