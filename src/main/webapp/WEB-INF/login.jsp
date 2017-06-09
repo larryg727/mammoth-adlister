@@ -8,8 +8,8 @@
 <body>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
     <div class="container">
-        <h1>Please Log In</h1>
-        <form action="/login" method="POST">
+        <h1 class="col-sm-8 col-sm-offset-2">Please Log In</h1>
+        <form action="/login" method="POST" class="col-sm-8 col-sm-offset-2">
             <div class="form-group">
                 <label for="username">Username</label>
                 <input id="username" name="username" class="form-control" type="text">
@@ -20,6 +20,7 @@
             </div>
             <input type="submit" class="btn btn-primary btn-block" value="Log In">
         </form>
+        <h3 class="col-sm-8 col-sm-offset-2">New User? <a href="/register">Register Here!</a></h3>
     </div>
 </body>
 </html>

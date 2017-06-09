@@ -1,7 +1,7 @@
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-import com.mysql.cj.jdbc.Driver;
+import com.mysql.jdbc.Driver;
 /**
  * Created by larryg on 6/9/17.
  */
@@ -49,7 +49,4 @@ public class MySQLAdsDao implements Ads{
         return null;
     }
 
-    public void setAds(List<Ad> ads) {
-        this.ads = ads;
-    }
 }

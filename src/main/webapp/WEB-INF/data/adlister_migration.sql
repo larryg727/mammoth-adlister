@@ -1,5 +1,7 @@
 USE adlister_db;
 
+TRUNCATE table users;
+
 INSERT into users (username, email, password)
     VALUES
       ('nancy', 'nancycycles@mail.com', 'nancy123'),
@@ -8,6 +10,7 @@ INSERT into users (username, email, password)
       ('javier', 'javierfixit@fix.com', 'javier123'),
       ('bill', 'billybonsai@tree.com', 'bill123');
 
+TRUNCATE TABLE ads;
 
 INSERT into ads (user_id, title, description)
     VALUES
