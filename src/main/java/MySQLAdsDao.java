@@ -30,7 +30,7 @@ public class MySQLAdsDao implements Ads{
            ads.clear();
         if(ads.isEmpty()){
             ResultSet rs = stmt.executeQuery("SELECT * FROM ads;");;
-            System.out.println("inside if statement");
+
             while(rs.next()){
             Long user_id = rs.getLong("user_id");
             String title = rs.getString("title");
@@ -38,9 +38,7 @@ public class MySQLAdsDao implements Ads{
             Ad newAd = new Ad(user_id, title, description);
             ads.add(newAd);
             }
-            System.out.println("out of the while");
         }
-        System.out.println("out of the if");
         return ads;
     }
 
