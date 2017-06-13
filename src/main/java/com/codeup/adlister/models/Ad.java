@@ -13,7 +13,7 @@ public class Ad {
         this.description = description;
     }
 
-    public Ad(long userId, String title, String description) {
+    public Ad(long i, String s, String s1) {
         this.userId = userId;
         this.title = title;
         this.description = description;

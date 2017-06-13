@@ -34,7 +34,12 @@ public class MySQLUsersDao implements Users {
             stmt.setString(1, username);
             ResultSet rs = stmt.executeQuery();
             if (rs.next()) {
-                User user = new User(rs.getLong(1), rs.getString(2), rs.getString(3), rs.getString(4));
+                User user = new User(
+                        rs.getLong(1),
+                        rs.getString(2),
+                        rs.getString(3),
+                        rs.getString(4)
+                );
                 return user;
             }else{
                 User user = null;
