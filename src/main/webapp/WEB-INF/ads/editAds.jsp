@@ -1,16 +1,25 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Carlos
-  Date: 6/14/17
-  Time: 3:18 PM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>$Title$</title>
+    <jsp:include page="/WEB-INF/partials/head.jsp">
+        <jsp:param name="title" value="Create a new Ad" />
+    </jsp:include>
 </head>
 <body>
-$END$
+<div class="container">
+    <h1>Edit Ad</h1>
+    <form action="/ads/editAd" method="post">
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input id="title" name="title" class="form-control" type="text" value="${ad.title}">
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea id="description" name="description" class="form-control" type="text">${ad.description}</textarea>
+        </div>
+        <button type="submit" class="btn btn-block btn-primary">Update</button>
+        <button type="submit" class="btn btn-block btn-primary">Delete</button>
+    </form>
+</div>
 </body>
 </html>

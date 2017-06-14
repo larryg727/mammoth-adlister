@@ -16,6 +16,7 @@
             <h3>${ad.title}</h3>
             <p>${ad.description}</p>
             <p><a href="/ads/adpage?id=${ad.id}">show ${ad.title}</a></p>
+            <p><a href="/ads/editAds?id=${ad.id}">edit</a></p>
         </c:forEach>
 
     </div>
