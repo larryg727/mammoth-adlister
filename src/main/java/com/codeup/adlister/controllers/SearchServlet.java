@@ -1,5 +1,7 @@
 package com.codeup.adlister.controllers;
 
+import com.codeup.adlister.dao.DaoFactory;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -13,14 +15,16 @@ import java.io.IOException;
 @WebServlet(name = "SearchServlet", urlPatterns = "/searchResults")
 public class SearchServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String searchQuery = request.getParameter("search");
+
 
 
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String searchQuery = request.getParameter("search");
 
+        request.setAttribute("ads", DaoFactory.getAdsDao().searchAds(searchQuery));
 
-        request.getRequestDispatcher("/WEB-INF/ads/searchResults.jsp");
+        request.getRequestDispatcher("/WEB-INF/ads/searchResults.jsp").forward(request, response);
     }
 }

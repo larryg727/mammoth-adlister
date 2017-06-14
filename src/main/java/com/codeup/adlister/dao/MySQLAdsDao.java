@@ -85,4 +85,18 @@ public class MySQLAdsDao implements Ads {
         }
     return null;
     }
+
+
+    public List<Ad> searchAds(String search){
+        String sql = "SELECT * from ads WHERE title LIKE ?";
+
+        try {
+            PreparedStatement stmt = connection.prepareStatement(sql);
+            stmt.setString(1,"%" + search + "%");
+            ResultSet rs = stmt.executeQuery();
+            return createAdsFromResults(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error searching for ad.", e);
+        }
+    }
 }
