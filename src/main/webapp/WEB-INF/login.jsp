@@ -9,6 +9,7 @@
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
     <div class="container">
         <h1>Please Log In</h1>
+        <h3>New User? <a href="/register">Register here.</a></h3>
         <form action="/login" method="POST">
             <div class="form-group">
                 <label for="username">Username</label>
