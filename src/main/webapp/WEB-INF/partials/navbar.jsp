@@ -4,6 +4,12 @@
         <div class="navbar-header">
             <a class="navbar-brand" href="/ads">Adlister</a>
         </div>
+        <form class="navbar-form navbar-left" action="/searchResults" method="post">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
         <ul class="nav navbar-nav navbar-right">
             <li><a href="/login">Login</a></li>
             <li><a href="/logout">Logout</a></li>
