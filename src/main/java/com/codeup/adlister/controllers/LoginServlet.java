@@ -30,8 +30,8 @@ public class LoginServlet extends HttpServlet {
             response.sendRedirect("/login");
             return;
         }
-        String hash = Password.hash(username);
-        boolean validAttempt = Password.check(username, hash);
+
+        boolean validAttempt = Password.check(password, user.getPassword());
 
 
         if (validAttempt) {

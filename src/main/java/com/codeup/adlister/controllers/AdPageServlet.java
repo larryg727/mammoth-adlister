@@ -14,8 +14,9 @@ import java.io.IOException;
 public class AdPageServlet extends HttpServlet  {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 //       long id = Long.parseLong(request.getParameter("id"));
-        Ad ad = DaoFactory.getAdsDao().findAdById((long) 2);
-        request.setAttribute("ad", ad);
+//        Ad ad = DaoFactory.getAdsDao().findAdById((long) 2);
+//        request.setAttribute("ad", ad);
+        request.setAttribute("ad", DaoFactory.getAdsDao().findAdById(Long.parseLong(request.getParameter("id"))));
 
         request.getRequestDispatcher("/WEB-IF/ads/adpage.jsp").forward(request, response);
     }
