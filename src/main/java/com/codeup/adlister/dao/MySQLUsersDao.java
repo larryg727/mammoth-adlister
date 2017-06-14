@@ -64,4 +64,16 @@ public class MySQLUsersDao implements Users {
         );
     }
 
+    public User getUserById(Long id) {
+        String query = "SELECT * FROM users JOIN ads ON users.id = ads.user_id WHERE ads.user_id = ?";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
+            stmt.setLong(1, id);
+            return extractUser(stmt.executeQuery());
+        } catch (SQLException e) {
+            throw new RuntimeException("Error finding a user by ads.user_id", e);
+        }
+
+    }
+
 }

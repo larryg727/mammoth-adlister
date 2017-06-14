@@ -13,12 +13,13 @@ import java.io.IOException;
 @WebServlet(name = "controllers.AdPageServlet", urlPatterns = "/ads/adpage")
 public class AdPageServlet extends HttpServlet  {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//       long id = Long.parseLong(request.getParameter("id"));
-//        Ad ad = DaoFactory.getAdsDao().findAdById((long) 2);
-//        request.setAttribute("ad", ad);
-        request.setAttribute("ad", DaoFactory.getAdsDao().findAdById(Long.parseLong(request.getParameter("id"))));
+       long id = Long.parseLong(request.getParameter("id"));
+        Ad ad = DaoFactory.getAdsDao().findAdById(id);
+        request.setAttribute("ad", ad);
+//        request.setAttribute("ad", DaoFactory.getAdsDao().findAdById(Long.parseLong(request.getParameter("id"))));
+        request.setAttribute("user", DaoFactory.getUsersDao().getUserById(ad.getUserId()));
 
-        request.getRequestDispatcher("/WEB-IF/ads/adpage.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/ads/adpage.jsp").forward(request, response);
     }
 
 }
