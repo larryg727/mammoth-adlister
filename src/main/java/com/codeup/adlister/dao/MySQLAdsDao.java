@@ -99,4 +99,17 @@ public class MySQLAdsDao implements Ads {
             throw new RuntimeException("Error searching for ad.", e);
         }
     }
+
+    public List<Ad> findAdsByUser(long id){
+        String sql = "SELECT * from ads JOIN users ON ads.user_id = users.id where users.id = ?";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(sql);
+            stmt.setLong(1, id);
+            ResultSet rs = stmt.executeQuery();
+            return createAdsFromResults(rs);
+
+        } catch (SQLException e) {
+            throw new RuntimeException("Error searching for ads.", e);
+        }
+    }
 }
