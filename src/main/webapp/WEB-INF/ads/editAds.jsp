@@ -21,5 +21,7 @@
         <button name="btn" type="submit" class="btn btn-block btn-primary" value="delete">Delete</button>
     </form>
 </div>
+
+<jsp:include page="../../WEB-INF/partials/Jsscripts.jsp" />
 </body>
 </html>
