@@ -23,6 +23,7 @@
                     <ul class="dropdown-menu">
                         <li><a href="/profile">View Profile</a></li>
                         <li><a href="/updateProfile">Update Profile</a></li>
+                        <li><a href="/ads/create">Create Ad</a></li>
                     </ul>
                 </li>
 
