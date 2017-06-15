@@ -125,4 +125,15 @@ public class MySQLAdsDao implements Ads {
             throw new RuntimeException("Error updating ads.", e);
         }
     }
+
+    public void deleteAd(Long id) {
+        String sql = "DELETE FROM ads WHERE id = ?";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(sql);
+            stmt.setLong(1, id);
+            stmt.execute();
+        } catch (SQLException e) {
+            throw new RuntimeException("Error deleting ads.", e);
+        }
+    }
 }

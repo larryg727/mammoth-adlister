@@ -17,8 +17,8 @@
             <label for="description">Description</label>
             <textarea id="description" name="description" class="form-control" type="text">${ad.description}</textarea>
         </div>
-        <button type="submit" class="btn btn-block btn-primary">Update</button>
-        <button type="submit" class="btn btn-block btn-primary">Delete</button>
+        <button name="btn" type="submit" class="btn btn-block btn-primary" value="update">Update</button>
+        <button name="btn" type="submit" class="btn btn-block btn-primary" value="delete">Delete</button>
     </form>
 </div>
 </body>

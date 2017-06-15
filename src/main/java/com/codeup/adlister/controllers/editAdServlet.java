@@ -11,14 +11,13 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet(name = "controllers.editAdServlet", urlPatterns = "/ads/editAds")
-public class editAdServlet extends HttpServlet{
+public class editAdServlet extends HttpServlet {
     Ad ad = null;
+
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         long id = Long.parseLong(request.getParameter("id"));
         ad = DaoFactory.getAdsDao().findAdById(id);
         request.setAttribute("ad", ad);
-
-        System.out.println("doGet Ad id :"+ ad.getId());
 
         request.getRequestDispatcher("/WEB-INF/ads/editAds.jsp").forward(request, response);
     }
@@ -26,12 +25,16 @@ public class editAdServlet extends HttpServlet{
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String title = request.getParameter("title");
         String description = request.getParameter("description");
+        String btn = request.getParameter("btn");
+        if (btn.equals("update")) {
+            DaoFactory.getAdsDao().editAd(ad.getId(), title, description);
 
-        System.out.println("Ad id: " + ad.getId());
+            response.sendRedirect("/ads/adpage?id=" + ad.getId());
+        } else if (btn.equals("delete")) {
+            DaoFactory.getAdsDao().deleteAd(ad.getId());
 
-        DaoFactory.getAdsDao().editAd(ad.getId(), title, description);
-
-        response.sendRedirect("/ads/adpage?id="+ ad.getId());
+            response.sendRedirect("/profile");
+        }
     }
 
 }
