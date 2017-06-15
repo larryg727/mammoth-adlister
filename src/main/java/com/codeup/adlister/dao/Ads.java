@@ -12,4 +12,5 @@ public interface Ads {
     Ad findAdById(Long id);
     List<Ad> searchAds(String search);
     List<Ad> findAdsByUser(long id);
+    void editAd(Long id, String title, String description);
 }
