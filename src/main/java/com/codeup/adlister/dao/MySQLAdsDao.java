@@ -114,7 +114,7 @@ public class MySQLAdsDao implements Ads {
     }
 
     public void editAd(Long id, String title, String description) {
-        String sql = "UPDATE ad SET title = ?, description = ? WHERE ad.id = ?";
+        String sql = "UPDATE ads SET title = ?, description = ? WHERE ads.id = ?";
         try {
             PreparedStatement stmt = connection.prepareStatement(sql);
             stmt.setString(1, title);
