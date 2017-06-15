@@ -9,14 +9,14 @@
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
-<div class="container">
+<div class="container text-center">
     <h1>Your search results!</h1>
 
     <c:forEach var="ad" items="${ads}">
-        <div class="col-md-6">
-            <h2>${ad.title}</h2>
+        <div class="col-md-4">
+            <img src="http://via.placeholder.com/250x250" alt="img_place_holder">
+            <a href="/ads/adpage?id=${ad.id}"><h2>${ad.title}</h2></a>
             <p>${ad.description}</p>
-            <p><a href="/ads/adpage?id=${ad.id}">show ${ad.title}</a></p>
         </div>
     </c:forEach>
 </div>
