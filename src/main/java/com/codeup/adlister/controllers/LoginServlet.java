@@ -39,6 +39,7 @@ public class LoginServlet extends HttpServlet {
 
             response.sendRedirect("/profile");
         } else {
+
             response.sendRedirect("/login");
         }
     }

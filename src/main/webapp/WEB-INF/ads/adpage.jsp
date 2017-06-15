@@ -12,7 +12,7 @@
 <div class="container">
     <h1>Ad page!</h1>
     <div class="col-md-6">
-        <h2>Title ${ad.title}</h2>
+        <h2>Title: ${ad.title}</h2>
         <p>Posted by: ${user.username}</p>
         <p>Description: ${ad.description}</p>
     </div>
