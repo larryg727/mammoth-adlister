@@ -16,7 +16,16 @@
             <li><a href="/login">Login</a></li>
            </c:if>
             <c:if test="${sessionScope.user != null}">
-            <li><a href="/profile">Profile</a></li>
+                <li role="presentation" class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        Profile<span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/profile">View Profile</a></li>
+                        <li><a href="/updateProfile">Update Profile</a></li>
+                    </ul>
+                </li>
+
             <li><a href="/logout">Logout</a></li>
             </c:if>
         </ul>

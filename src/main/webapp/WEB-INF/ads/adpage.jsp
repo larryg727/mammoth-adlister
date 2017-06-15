@@ -17,6 +17,6 @@
         <p>Description: ${ad.description}</p>
     </div>
 </div>
-
+<jsp:include page="../../WEB-INF/partials/Jsscripts.jsp" />
 </body>
 </html>
