@@ -8,7 +8,7 @@
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 <div class="container">
-    <div class="col-sm-8 col-sm-offset-2">
+    <div class="col-sm-8 col-sm-offset-2 content-container">
     <h1>Edit Ad</h1>
     <form action="/ads/editAds" method="post">
         <div class="form-group">
