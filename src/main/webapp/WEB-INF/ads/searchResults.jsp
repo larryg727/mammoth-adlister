@@ -14,9 +14,11 @@
 
     <c:forEach var="ad" items="${ads}">
         <div class="col-md-4">
-            <img src="http://via.placeholder.com/250x250" alt="img_place_holder">
-            <a href="/ads/adpage?id=${ad.id}"><h2>${ad.title}</h2></a>
-            <p>${ad.description}</p>
+            <div class="ad-container">
+                <img src="http://via.placeholder.com/250x250" alt="img_place_holder">
+                <a href="/ads/adpage?id=${ad.id}"><h2>${ad.title}</h2></a>
+                <p>${ad.description}</p>
+            </div>
         </div>
     </c:forEach>
 </div>

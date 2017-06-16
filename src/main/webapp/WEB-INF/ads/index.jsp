@@ -15,9 +15,12 @@
 
     <c:forEach var="ad" items="${ads}">
         <div class="col-md-4 text-center">
-            <img src="http://via.placeholder.com/250x250" alt="">
-            <a href="/ads/adpage?id=${ad.id}"><h2>${ad.title}</h2></a>
-            <p>${fn:substring(ad.description, 0, 50)}....</p>
+
+            <div class="ad-container">
+                <img src="http://via.placeholder.com/250x250" alt="">
+                <a href="/ads/adpage?id=${ad.id}"><h2>${ad.title}</h2></a>
+                <p>${ad.description}</p>
+            </div>
 
         </div>
     </c:forEach>
