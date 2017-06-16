@@ -18,7 +18,7 @@
 
 
     <div class="container text-center headerHero">
-        <h1>Welcome to the Adlister!</h1>
+        <h1>Buy My Stuff!</h1>
         <h3>Buy stuff. Sell stuff.</h3>
         <div>
             <button id="home-view-ads-btn" type="button" class="btn btn-default btn-lg"><a href="/ads">view ads</a></button>

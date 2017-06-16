@@ -10,7 +10,7 @@
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 
-<div class="container text-center">
+<div class="container text-center content-container">
     <h1>Here Are all the ads!</h1>
 
     <c:forEach var="ad" items="${ads}">

@@ -3,7 +3,7 @@
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <a class="navbar-brand" href="/">Adlister</a>
+            <a class="navbar-brand" href="/">B.M.S</a>
         </div>
         <form class="navbar-form navbar-left" action="/searchResults" method="get">
             <div class="form-group">
@@ -12,6 +12,7 @@
             <button type="submit" class="btn btn-default">Submit</button>
         </form>
         <ul class="nav navbar-nav navbar-right">
+            <li><a href="/ads">View ads</a></li>
            <c:if test="${sessionScope.user == null}">
             <li><a href="/register">Register</a></li>
             <li><a href="/login">Login</a></li>

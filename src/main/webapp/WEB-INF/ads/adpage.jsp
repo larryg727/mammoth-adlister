@@ -10,12 +10,11 @@
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 
 <div class="container text-center">
+    <div class="col-md-8 col-md-offset-2 content-container">
     <h1>Ad page!</h1>
-    <div class="col-md-12">
         <img src="http://via.placeholder.com/500x400" alt="">
-        <h2>Title: ${ad.title}</h2>
-        <p>Posted by: ${user.username}</p>
-        <p>Description: ${ad.description}</p>
+        <h2>${ad.title}</h2>
+        <p>Posted by: ${user.username} <br> ${ad.description}</p>
     </div>
 </div>
 <jsp:include page="../../WEB-INF/partials/Jsscripts.jsp" />

@@ -7,8 +7,8 @@
 </head>
 <body>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
-    <div class="container">
-        <div class="col-sm-6 col-sm-offset-3">
+    <div class="container ">
+        <div class="col-sm-6 col-sm-offset-3 content-container">
         <h1>Please Log In</h1>
         <h3>New User? <a href="/register">Register here.</a></h3>
         <form action="/login" method="POST">

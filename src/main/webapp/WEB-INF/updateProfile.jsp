@@ -8,7 +8,7 @@
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 <div class="container">
-    <div class="col-sm-8 col-sm-offset-2">
+    <div class="col-sm-8 col-sm-offset-2 content-container">
     <h1>Update your profile here</h1>
 
     <form action="/updateProfile" method="POST">

@@ -9,7 +9,7 @@
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 
-<div class="container text-center">
+<div class="container text-center content-container">
     <h1>Welcome, ${sessionScope.user.username}!</h1>
     <h3>Your currently running ads</h3>
     <c:forEach var="ad" items="${ads}">
