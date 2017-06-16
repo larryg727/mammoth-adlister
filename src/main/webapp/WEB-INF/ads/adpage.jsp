@@ -9,9 +9,10 @@
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 
-<div class="container">
+<div class="container text-center">
     <h1>Ad page!</h1>
-    <div class="col-md-6">
+    <div class="col-md-12">
+        <img src="http://via.placeholder.com/250x250" alt="">
         <h2>Title: ${ad.title}</h2>
         <p>Posted by: ${user.username}</p>
         <p>Description: ${ad.description}</p>
