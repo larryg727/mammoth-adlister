@@ -13,7 +13,7 @@
     <div class="col-md-8 col-md-offset-2 content-container">
     <h1>Ad page!</h1>
         <img src="http://via.placeholder.com/500x400" alt="">
-        <h2>${ad.title}</h2>
+        <h2>${ad.title} - $${ad.price}</h2>
         <p>Posted by: ${user.username} <br> ${ad.description}</p>
     </div>
 </div>

@@ -25,9 +25,11 @@ public class editAdServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String title = request.getParameter("title");
         String description = request.getParameter("description");
+        long price = Long.parseLong(request.getParameter("price"));
+        long category = Long.parseLong(request.getParameter("category"));
         String btn = request.getParameter("btn");
         if (btn.equals("update")) {
-            DaoFactory.getAdsDao().editAd(ad.getId(), title, description);
+            DaoFactory.getAdsDao().editAd(ad.getId(), title, description, price, category);
 
             response.sendRedirect("/ads/adpage?id=" + ad.getId());
         } else if (btn.equals("delete")) {

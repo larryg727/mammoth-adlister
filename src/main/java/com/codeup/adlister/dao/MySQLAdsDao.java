@@ -39,11 +39,13 @@ public class MySQLAdsDao implements Ads {
     @Override
     public Long insert(Ad ad) {
         try {
-            String insertQuery = "INSERT INTO ads(user_id, title, description) VALUES (?, ?, ?)";
+            String insertQuery = "INSERT INTO ads(user_id, title, description, price, category_id) VALUES (?, ?, ?, ?, ?)";
             PreparedStatement stmt = connection.prepareStatement(insertQuery, Statement.RETURN_GENERATED_KEYS);
             stmt.setLong(1, ad.getUserId());
             stmt.setString(2, ad.getTitle());
             stmt.setString(3, ad.getDescription());
+            stmt.setLong(4,ad.getPrice());
+            stmt.setLong(5, ad.getCategory());
             stmt.executeUpdate();
             ResultSet rs = stmt.getGeneratedKeys();
             rs.next();
@@ -58,7 +60,9 @@ public class MySQLAdsDao implements Ads {
             rs.getLong("id"),
             rs.getLong("user_id"),
             rs.getString("title"),
-            rs.getString("description")
+            rs.getString("description"),
+                rs.getLong("price"),
+                rs.getLong("category_id")
         );
     }
 
@@ -113,13 +117,15 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
-    public void editAd(Long id, String title, String description) {
-        String sql = "UPDATE ads SET title = ?, description = ? WHERE ads.id = ?";
+    public void editAd(Long id, String title, String description, long price, long category) {
+        String sql = "UPDATE ads SET title = ?, description = ?, price = ?, category_id = ? WHERE ads.id = ?";
         try {
             PreparedStatement stmt = connection.prepareStatement(sql);
             stmt.setString(1, title);
             stmt.setString(2, description);
-            stmt.setLong(3, id);
+            stmt.setLong(5, id);
+            stmt.setLong(3, price);
+            stmt.setLong(4, category);
             stmt.executeUpdate();
         } catch (SQLException e) {
             throw new RuntimeException("Error updating ads.", e);
