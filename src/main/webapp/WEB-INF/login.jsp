@@ -8,6 +8,7 @@
 <body>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
     <div class="container">
+        <div class="col-sm-6 col-sm-offset-3">
         <h1>Please Log In</h1>
         <h3>New User? <a href="/register">Register here.</a></h3>
         <form action="/login" method="POST">
@@ -19,8 +20,9 @@
                 <label for="password">Password</label>
                 <input id="password" name="password" class="form-control" type="password">
             </div>
-            <input type="submit" class="btn btn-primary btn-block" value="Log In">
+            <input type="submit" class="btn btn-primary col-xs-4 col-xs-offset-4" value="Log In">
         </form>
+    </div>
     </div>
 
     <jsp:include page="../WEB-INF/partials/Jsscripts.jsp" />

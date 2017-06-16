@@ -6,7 +6,9 @@
     </jsp:include>
 </head>
 <body>
+<jsp:include page="/WEB-INF/partials/navbar.jsp" />
 <div class="container">
+    <div class="col-sm-8 col-sm-offset-2">
     <h1>Edit Ad</h1>
     <form action="/ads/editAds" method="post">
         <div class="form-group">
@@ -17,9 +19,10 @@
             <label for="description">Description</label>
             <textarea id="description" name="description" class="form-control" type="text">${ad.description}</textarea>
         </div>
-        <button name="btn" type="submit" class="btn btn-block btn-primary" value="update">Update</button>
-        <button name="btn" type="submit" class="btn btn-block btn-primary" value="delete">Delete</button>
+        <button name="btn" type="submit" class="btn btn-danger col-xs-3 col-xs-offset-1" value="delete">Delete</button>
+        <button name="btn" type="submit" class="btn btn-primary col-xs-3 col-xs-offset-4" value="update">Update</button>
     </form>
+</div>
 </div>
 
 <jsp:include page="../../WEB-INF/partials/Jsscripts.jsp" />

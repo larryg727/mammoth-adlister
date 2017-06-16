@@ -8,6 +8,7 @@
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 <div class="container">
+    <div class="col-sm-8 col-sm-offset-2">
     <h1>Update your profile here</h1>
 
     <form action="/updateProfile" method="POST">
@@ -27,8 +28,9 @@
             <label for="confirm_password">Confirm Password</label>
             <input id="confirm_password" name="confirm_password" class="form-control" type="password">
         </div>
-        <input type="submit" class="btn btn-primary btn-block" value="Log In">
+        <input type="submit" class="btn btn-primary col-xs-4 col-xs-offset-4" value="Log In">
     </form>
+</div>
 </div>
 
 <jsp:include page="../WEB-INF/partials/Jsscripts.jsp" />
