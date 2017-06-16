@@ -8,6 +8,15 @@
 </head>
 <body>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
+
+        <div id="video">
+
+            <video playsinline autoplay loop muted>
+                <source src="img/hero.mp4" type="video/mp4">
+
+            </video>
+
+
     <div class="container text-center headerHero">
         <h1>Welcome to the Adlister!</h1>
         <h3>Buy stuff. Sell stuff.</h3>
@@ -16,7 +25,7 @@
             <button id="home-sign-in-btn" type="button" class="btn btn-defauult btn-lg"><a href="/login">Sign In</a></button>
         </div>
     </div>
-
+        </div>
 <jsp:include page="WEB-INF/partials/Jsscripts.jsp" />
 </body>
 </html>

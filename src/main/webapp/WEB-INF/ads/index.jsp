@@ -19,7 +19,7 @@
             <div class="ad-container">
                 <img src="http://via.placeholder.com/250x250" alt="">
                 <a href="/ads/adpage?id=${ad.id}"><h2>${ad.title}</h2></a>
-                <p>${ad.description}</p>
+                <p>${fn:substring(ad.description, 0, 45)}..</p>
             </div>
 
         </div>
