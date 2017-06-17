@@ -9,8 +9,11 @@
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 <div class="container">
     <div class="col-sm-8 col-sm-offset-2 content-container">
-    <h1>Edit Ad</h1>
-    <form action="/ads/editAds" method="post">
+    <h1 class="col-xs-11">Edit Ad</h1>
+        <a href="/profile"><button type="button" class="btn btn-danger col-xs-1 cancel">
+            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button></a>
+    <form action="/ads/editAds" method="post" class="col-xs-12">
         <div class="form-group">
             <label for="title">Title</label>
             <input id="title" name="title" class="form-control" type="text" value="${ad.title}">
@@ -24,7 +27,7 @@
         <label for="price">Price</label>
         <input id="price" name="price" class="form-control" type="text" value="${ad.price}">
     </div>
-    <div>
+    <div class="form-group">
         <label for="category">Category</label>
         <select id="category" name="category" class="form-control">
             <option value="${ad.category}" selected>--Same Category--</option>

@@ -56,9 +56,8 @@ video {
 
 .ad-container, p {
     background-color: khaki;
-    padding-top: 10px;
-    margin-top: 10px;
-    margin-right: 10px;
+    padding: 15px 0;
+    margin: 10px auto;
     width: 95%;
     border-radius: 10px;
 }
@@ -77,6 +76,7 @@ h3 {
 
 p {
     color: navy;
+    font-size: 1.1em;
 }
 
 .navbar-inverse .navbar-nav>li>a, .navbar-inverse .navbar-brand {
@@ -89,4 +89,8 @@ p {
 
 a {
     color: navy;
+}
+
+.cancel {
+    margin-top: 20px;
 }

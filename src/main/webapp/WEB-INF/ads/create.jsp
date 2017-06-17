@@ -9,21 +9,25 @@
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
     <div class="container">
         <div class="col-sm-8 col-sm-offset-2 content-container">
-        <h1>Create a new Ad</h1>
-        <form action="/ads/create" method="post">
-            <div class="form-group">
+        <h1 class="col-xs-11
+">Create a new Ad</h1>
+            <a href="/profile"><button type="button" class="btn btn-danger col-xs-1 cancel">
+            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button></a>
+            <form action="/ads/create" method="post">
+            <div class="form-group col-xs-12">
                 <label for="title">Title</label>
                 <input id="title" name="title" class="form-control" type="text">
             </div>
-            <div class="form-group">
+            <div class="form-group col-xs-12">
                 <label for="description">Description</label>
                 <textarea id="description" name="description" class="form-control" type="text"></textarea>
             </div>
-            <div class="form-group">
+            <div class="form-group col-xs-12">
             <label for="price">Price</label>
             <input id="price" name="price" class="form-control" type="text">
         </div>
-            <div>
+            <div class="form-group col-xs-12">
                 <label for="category">Category</label>
                 <select id="category" name="category" class="form-control">
                     <option value="7" selected>--Choose one--</option>

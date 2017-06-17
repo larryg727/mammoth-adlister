@@ -9,9 +9,12 @@
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 <div class="container">
     <div class="col-sm-8 col-sm-offset-2 content-container">
-    <h1>Update your profile here</h1>
+    <h1 class="col-xs-11">Update your profile here</h1>
+        <a href="/profile"><button type="button" class="btn btn-danger col-xs-1 cancel">
+            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button></a>
 
-    <form action="/updateProfile" method="POST">
+    <form action="/updateProfile" method="POST" class="col-xs-12">
         <div class="form-group">
             <label for="username">Username</label>
             <input id="username" name="username" class="form-control" type="text" value="${user.username}">

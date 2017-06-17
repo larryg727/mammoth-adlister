@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -16,8 +17,8 @@
         <div class="col-md-4">
             <div class="ad-container">
                 <img src="http://via.placeholder.com/250x250" alt="img_place_holder">
-                <a href="/ads/adpage?id=${ad.id}"><h2>${ad.title}</h2></a>
-                <p>${ad.description}</p>
+                <a href="/ads/adpage?id=${ad.id}"><h2>${ad.title}<br><small> $${ad.price}</small></h2></a>
+                <p>${fn:substring(ad.description, 0, 40)}..</p>
             </div>
         </div>
     </c:forEach>

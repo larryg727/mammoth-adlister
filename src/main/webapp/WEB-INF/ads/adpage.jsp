@@ -14,7 +14,7 @@
     <h1>Ad page!</h1>
         <img src="http://via.placeholder.com/500x400" alt="">
         <h2>${ad.title} - $${ad.price}</h2>
-        <p>Posted by: ${user.username} <br> ${ad.description}</p>
+        <p>${ad.description}<br><br>Posted by: ${user.username}</p>
     </div>
 </div>
 <jsp:include page="../../WEB-INF/partials/Jsscripts.jsp" />
