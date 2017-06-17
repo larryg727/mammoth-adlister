@@ -25,7 +25,11 @@
             </div>
             <div class="form-group col-xs-12">
             <label for="price">Price</label>
+                <div class="input-group">
+                <div class="input-group-addon">$</div>
             <input id="price" name="price" class="form-control" type="text">
+                    <div class="input-group-addon">.00</div>
+                </div>
         </div>
             <div class="form-group col-xs-12">
                 <label for="category">Category</label>

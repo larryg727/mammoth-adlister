@@ -5,12 +5,31 @@
         <div class="navbar-header">
             <a class="navbar-brand" href="/">B.M.S</a>
         </div>
-        <form class="navbar-form navbar-left" action="/searchResults" method="get">
+
+        <form class=" navbar-left navbar-form action="/searchResults" method="get">
             <div class="form-group">
                 <input id="search" name="search" type="text" class="form-control" placeholder="Search">
             </div>
-            <button type="submit" class="btn btn-default">Submit</button>
+            <button type="submit" class="btn btn-default">Search</button>
         </form>
+        <div  class="nav navbar-nav navbar-left">
+            <li role="presentation" class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    Browse By Category<span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="/category?id=1">Auto</a></li>
+                    <li><a href="/category?id=2">Clothing</a></li>
+                    <li><a href="/category?id=3">Electronics</a></li>
+                    <li><a href="/category?id=4">Furniture</a></li>
+                    <li><a href="/category?id=5">Games & Toys</a></li>
+                    <li><a href="/category?id=6">Household</a></li>
+                    <li><a href="/category?id=7">Other</a></li>
+                    <li><a href="/category?id=8">Pets</a></li>
+                    <li><a href="/category?id=9">Sports & Outdoors</a></li>
+                </ul>
+            </li>
+        </div>
         <ul class="nav navbar-nav navbar-right">
             <li><a href="/ads">View ads</a></li>
            <c:if test="${sessionScope.user == null}">

@@ -142,4 +142,17 @@ public class MySQLAdsDao implements Ads {
             throw new RuntimeException("Error deleting ads.", e);
         }
     }
+    public List<Ad> findAdsByCategory(long id){
+        String sql = "SELECT * from ads where category_id = ?";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(sql);
+            stmt.setLong(1, id);
+            ResultSet rs = stmt.executeQuery();
+            return createAdsFromResults(rs);
+
+        } catch (SQLException e) {
+            throw new RuntimeException("Error searching for ads.", e);
+        }
+    }
+
 }

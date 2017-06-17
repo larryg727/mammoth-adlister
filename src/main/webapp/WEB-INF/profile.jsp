@@ -17,7 +17,7 @@
         <div class="col-md-4">
             <div class="ad-container">
             <img src="http://via.placeholder.com/250x250" alt="img_place_holder">
-            <a href="/ads/adpage?id=${ad.id}"><h2>${ad.title}<br><small> $${ad.price}</small></h2></a>
+            <a href="/ads/adpage?id=${ad.id}"><h2>${ad.title}<br><small> $${ad.price}.00</small></h2></a>
 
             <p>${fn:substring(ad.description, 0, 40)}..</p>
             <button type="button" class="btn btn-default" aria-lable="Left Align">

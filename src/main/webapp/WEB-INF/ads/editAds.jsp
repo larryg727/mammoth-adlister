@@ -25,7 +25,12 @@
 
     <div class="form-group">
         <label for="price">Price</label>
-        <input id="price" name="price" class="form-control" type="text" value="${ad.price}">
+
+        <div class="input-group">
+            <div class="input-group-addon">$</div>
+            <input id="price" name="price" class="form-control" type="text" value="${ad.price}">
+            <div class="input-group-addon">.00</div>
+        </div>
     </div>
     <div class="form-group">
         <label for="category">Category</label>
